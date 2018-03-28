@@ -3,8 +3,6 @@ import { withStyles } from 'material-ui/styles'
 
 import { memoize } from '../../utils/functions'
 import AppBar from '../app-bar'
-import Drawer from '../drawer'
-import MainMenu from '../main-menu'
 import Snackbar from '../snackbar'
 import Alert from '../alert'
 
@@ -56,10 +54,8 @@ class Index extends PureComponent {
       user = {},
       messageList,
       title,
-      menu,
       authRequired,
 
-      NavLink = Def,
       toggleMenu,
       loginRequest,
       onHideMessage,
@@ -77,12 +73,6 @@ class Index extends PureComponent {
             onClickDrawerButton={toggleMenu}
             onClickLoginButton={loginRequest}
           />
-          <Drawer
-            open={mainMenuOpen}
-            onClickDrawerButton={toggleMenu}
-          >
-            <MainMenu list={menu} Link={NavLink} />
-          </Drawer>
           <main className={classes.content}>
             { children }
           </main>

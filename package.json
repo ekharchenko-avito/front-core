@@ -1,6 +1,6 @@
 {
   "name": "front-core",
-  "version": "0.8.2",
+  "version": "0.8.2-hidemenu",
   "main": "src/index.js",
   "bin": {
     "front-core": "./bin/front-core"
